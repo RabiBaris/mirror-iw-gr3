@@ -1,26 +1,25 @@
-stages:
-    - check
+image: bitnami/laravel:8.6.2-debian-10-r23
 
-build: 
-    stage: check
-    image: node:8.11.3
-    script:
-        - npm install --silent
-        - npm run build
-    artifacts:
-        paths:
-          - dist/
+composer:
+  stage: build
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-composer
+    paths:
+      - vendor/
+  script:
+      - composer update
+      - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+      - cp .env.example .env
+      - php artisan key:generate
+  artifacts:
+    expire_in: 1 month
+    paths:
+      - vendor/
+      - .env
 
-test:
-    stage: check
-    image: weboaks/node-karma-protractor-chrome
-    script:
-        - npm install --silent
-        - npm run test
-
-lint: 
-    stage: check
-    image: node:8.11.3
-    script:
-        - npm install --silent
-        - npm run lint
+deploy_staging:
+  stage: deploy
+  script:
+    - git remote add heroku https://git.heroku.com/projet-final-gr3.git
+    - git push heroku 17-feature/ci
+    - echo "Deployed to Staging Server https://projet-final-gr3.herokuapp.com/"
