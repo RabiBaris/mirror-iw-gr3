@@ -1,4 +1,4 @@
-# Projet_Final_Versionning_Collaboratif
+# Projet Final Versionning Collaboratif
 
 ## <span style="color:Orange">Installation :</span>
 
@@ -12,6 +12,8 @@ git clone https://gitlab.com/iw-intensive-week-1-2021/groupe-3-iw2.git
 - Lancer le docker avec la commande suivante : 
 
 ```
+docker compose build
+docker compose up
 ```
 
 ##  <span style="color:Orange">Présentation du projet :</span>
@@ -62,6 +64,6 @@ statique minimum.
 
 
 
-## <span style="color:Orange">License :</span>
+## <span style="color:Orange">Licence :</span>
 
-Ce projet est sous licence : Licence.aro
+Ce projet est sous licence : GNU GPLv3
