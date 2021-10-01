@@ -20,5 +20,6 @@ composer:
 deploy_staging:
   stage: deploy
   script:
-    - git push heroku
+    - heroku git:remote -a projet-final-gr3
+    - git push heroku 17-feature/ci
     - echo "Deployed to Staging Server https://projet-final-gr3.herokuapp.com/"
