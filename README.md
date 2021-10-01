@@ -1,4 +1,4 @@
-# Projet_Final_Versionning_Collaboratif
+# Projet Final Versionning Collaboratif
 
 ## <span style="color:Orange">Installation :</span>
 
@@ -65,4 +65,4 @@ statique minimum.
 
 ## <span style="color:Orange">Licence :</span>
 
-Ce projet est sous licence : Licence.aro
+Ce projet est sous licence : GNU GPLv3
