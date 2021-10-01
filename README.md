@@ -1,67 +1,91 @@
 # Projet_Final_Versionning_Collaboratif
 
-## <span style="color:Orange">Installation :</span>
 
 
- - Cloner le projet avec la commande suivante : 
+## Getting started
 
+To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-```sh
-git clone https://gitlab.com/iw-intensive-week-1-2021/groupe-3-iw2.git 
+Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+
+## Add your files
+
+- [ ] [Create](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+- [ ] [Add files using the command line](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+
 ```
-- Lancer le docker avec la commande suivante : 
-
+cd existing_repo
+git remote add origin https://gitlab.com/Eliwenaa/projet_final_versionning_collaboratif.git
+git branch -M main
+git push -uf origin main
 ```
-```
 
-##  <span style="color:Orange">Présentation du projet :</span>
+## Integrate with your tools
 
+- [ ] [Set up project integrations](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/user/project/integrations/)
 
-Nous sommes en école d'informatique en 4ème année à l'ESGI, nous avons pour but de créer un projet regroupent du versionning et du travail collaboratif .
+## Collaborate with your team
 
-##  <span style="color:Orange">Sujet du projet :</span>
+- [ ] [Invite team members and collaborators](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/user/project/members/)
+- [ ] [Create a new merge request](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
+- [ ] [Automatically close issues from merge requests](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
+- [ ] [Automatically merge when pipeline succeeds](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
+## Test and Deploy
 
-Consultant dans une Entreprise de Services Numériques (ESN), vous êtes
-envoyés en mission d’expertise avec deux de vos collaborateurs (groupes de 3
-donc) pour mettre en place des bonnes pratiques sur un projet fraîchement
-acquis par la société cliente, et ainsi favoriser l’ajout de nouvelles
-fonctionnalités par une équipe qui sera composée après votre passage.
-La base de code existante est en PHP et utilise PHP en version 5.6 et MySQL
-5.6. Ce code vous sera fourni sous forme d’archive (zip). Aucun historique de
-code ou versions ne vous sera fourni. Vous devez créer une version figée du
-code fourni avant de commencer votre travail.
-Pour ne pas retomber dans les travers de l’ancien prestataire, le client vous
-demande de mettre en place un maximum de bonnes pratiques, notamment en
-permettant aux nouveaux développeurs une installation claire, avec peu de
-commandes, mais aussi une documentation minimale, une duplication de dépôts
-de code source, etc. S’ajoutent à cette liste toutes les recommandations que
-vous pourrez proposer, en termes de workflow et autres éléments de travail.
-Une montée de version en PHP 8.0 est à réaliser pour des raisons de sécurité.
+Use the built-in continuous integration in GitLab.
 
+- [ ] [Get started with GitLab CI/CD](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/ci/quick_start/index.html)
+- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/user/application_security/sast/)
+- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
+- [ ] [Use pull-based deployments for improved Kubernetes management](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://docs.gitlab.com/ee/user/clusters/agent/)
 
-Le nombre de ce endpoint correspond au timestamp Unix courant.
-Le travail est à réaliser à l’aide de Gitlab repository, Gitlab Boards,
-Gitlab Issues, Gitlab CI, Github repository et Heroku en push to deploy.
-Pour limiter la consommation sur les plateformes collaboratives, vous devez
-effectuer des vérifications de bases côté utilisateur au moment de contribuer
-le code. Vous devrez par la suite assurer de façon garantie sur l’intégration
-continue le style de code, le passage des tests unitaires et une analyse
-statique minimum.
+***
 
-## <span style="color:Orange">Auteurs :</span>
+# Editing this README
 
-- [Adam Sellin] 
-- [Rabi Baris]
-- [Océane Renoux]
+When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://gitlab.com/-/experiment/new_project_readme_content:9a4064e013fd4c4259ac0b1320f7fa74?https://www.makeareadme.com/) for this template.
 
+## Suggestions for a good README
+Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-[Adam Sellin]:<https://github.com/AdamSellin>
-[Rabi Baris]:<https://github.com/RabiBaris>
-[Océane Renoux]:<https://github.com/Eliwena>
+## Name
+Choose a self-explaining name for your project.
 
+## Description
+Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
+## Badges
+On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
 
-## <span style="color:Orange">License :</span>
+## Visuals
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
-Ce projet est sous licence : Licence.aro
+## Installation
+Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+
+## Usage
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+
+## Support
+Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+
+## Roadmap
+If you have ideas for releases in the future, it is a good idea to list them in the README.
+
+## Contributing
+State if you are open to contributions and what your requirements are for accepting them.
+
+For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+
+You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+
+## Authors and acknowledgment
+Show your appreciation to those who have contributed to the project.
+
+## License
+For open source projects, say how it is licensed.
+
+## Project status
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+
