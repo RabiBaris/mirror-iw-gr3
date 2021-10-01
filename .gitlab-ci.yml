@@ -17,15 +17,10 @@ composer:
       - vendor/
       - .env
 
-codestyle:
-  stage: test
-  dependencies: []
+deploy_staging:
+  stage: deploy
   script:
-    - phpcs --standard=PSR2 --extensions=php --ignore=app/Support/helpers.php app
-    
-phpunit:
-  stage: test
-  dependencies:
-    - composer
-  script:
-    - phpunit --coverage-text --colors=never
+    - git push heroku master
+    - echo "Deployed to Staging Server https://projet-final-gr3.herokuapp.com/"
+  only:
+    - master
