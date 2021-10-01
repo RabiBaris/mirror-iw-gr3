@@ -1,0 +1,30 @@
+version: '3.3'
+services:
+        php-apache:
+            container_name: php-apache
+            build:
+                context: .
+                dockerfile: Dockerfile
+            depends_on:
+                - db
+            volumes:
+                - .:/var/www/html/
+            ports:
+                - 80:80
+
+        db:
+            image: mysql:5.6
+            environment:
+                MYSQL_DATABASE: demo
+                MYSQL_USER: demo
+                MYSQL_PASSWORD: demo
+            ports:
+                - 3306:3306
+
+        composer:
+            image: composer
+            command: install
+            volumes: 
+                - .:/var/www/html/
+
+
