@@ -12,7 +12,8 @@ git clone https://gitlab.com/iw-intensive-week-1-2021/groupe-3-iw2.git
 - Lancer le docker avec la commande suivante : 
 
 ```
-docker compose up -d
+docker compose build
+docker compose up
 ```
 
 ##  <span style="color:Orange">Présentation du projet :</span>
