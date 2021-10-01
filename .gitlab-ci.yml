@@ -1,6 +1,5 @@
 stages:
     - check
-    - deploy
 
 build: 
     stage: check
@@ -25,29 +24,3 @@ lint:
     script:
         - npm install --silent
         - npm run lint
-
-deploystaging:
-    stage: deploy
-    image: node:8.11.3
-    dependencies:
-      - build  
-    script:
-      - npm run staging
-    environment:
-      name: staging
-      url: https://staging.example.com
-    only:
-      - dev
-
-deployprod:
-    stage: deploy
-    image: node:8.11.3
-    dependencies:
-      - build  
-    script:
-      - npm run prod
-    environment:
-      name: production
-      url: https://example.com
-    only:
-      - main
