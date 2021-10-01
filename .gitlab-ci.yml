@@ -1,4 +1,4 @@
-image: lorisleiva/laravel-docker:latest
+image: bitnami/laravel:8.6.2-debian-10-r23
 
 composer:
   stage: build
