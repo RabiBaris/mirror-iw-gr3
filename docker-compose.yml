@@ -2,6 +2,8 @@ version: '3.3'
 services:
         php-apache:
             container_name: php-apache
+            environment:
+                - DEBUG=1
             build:
                 context: .
                 dockerfile: Dockerfile
@@ -11,20 +13,16 @@ services:
                 - .:/var/www/html/
             ports:
                 - 80:80
+            env_file:
+                - ./.env
 
         db:
             image: mysql:5.6
             environment:
+                MYSQL_RANDOM_ROOT_PASSWORD: "root"
                 MYSQL_DATABASE: demo
                 MYSQL_USER: demo
                 MYSQL_PASSWORD: demo
             ports:
                 - 3306:3306
-
-        composer:
-            image: composer
-            command: install
-            volumes: 
-                - .:/var/www/html/
-
 
