@@ -20,8 +20,6 @@ composer:
 deploy_staging:
   stage: deploy
   script:
-    - apt-update && apt-upgrade
-    - apt install git
     - git remote add heroku https://git.heroku.com/projet-final-gr3.git
     - git push heroku 17-feature/ci
     - echo "Deployed to Staging Server https://projet-final-gr3.herokuapp.com/"
