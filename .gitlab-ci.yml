@@ -22,5 +22,3 @@ deploy_staging:
   script:
     - git push heroku master
     - echo "Deployed to Staging Server https://projet-final-gr3.herokuapp.com/"
-  only:
-    - master
