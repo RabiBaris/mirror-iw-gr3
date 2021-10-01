@@ -1,26 +1,44 @@
-stages:
-    - check
+composer:
+  stage: build
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-composer
+    paths:
+      - vendor/
+  script:
+      - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+      - cp .env.example .env
+      - php artisan key:generate
+  artifacts:
+    expire_in: 1 month
+    paths:
+      - vendor/
+      - .env
 
-build: 
-    stage: check
-    image: node:8.11.3
-    script:
-        - npm install --silent
-        - npm run build
-    artifacts:
-        paths:
-          - dist/
+npm:
+  stage: build
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-npm
+    paths:
+      - node_modules/
+  script:
+      - npm install
+      - npm run production
+  artifacts:
+    expire_in: 1 month
+    paths:
+      - node_modules/
+      - public/css/
+      - public/js/
 
-test:
-    stage: check
-    image: weboaks/node-karma-protractor-chrome
-    script:
-        - npm install --silent
-        - npm run test
-
-lint: 
-    stage: check
-    image: node:8.11.3
-    script:
-        - npm install --silent
-        - npm run lint
+codestyle:
+  stage: test
+  dependencies: []
+  script:
+    - phpcs --standard=PSR2 --extensions=php --ignore=app/Support/helpers.php app
+    
+phpunit:
+  stage: test
+  dependencies:
+    - composer
+  script:
+    - phpunit --coverage-text --colors=never
