@@ -1,0 +1,25 @@
+image: bitnami/laravel:8.6.2-debian-10-r23
+
+composer:
+  stage: build
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-composer
+    paths:
+      - vendor/
+  script:
+      - composer update
+      - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+      - cp .env.example .env
+      - php artisan key:generate
+  artifacts:
+    expire_in: 1 month
+    paths:
+      - vendor/
+      - .env
+
+deploy_staging:
+  stage: deploy
+  script:
+    - git remote add heroku https://git.heroku.com/projet-final-gr3.git
+    - git push heroku 17-feature/ci
+    - echo "Deployed to Staging Server https://projet-final-gr3.herokuapp.com/"
