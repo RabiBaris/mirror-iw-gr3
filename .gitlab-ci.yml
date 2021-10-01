@@ -5,4 +5,4 @@ stages:
 
 job:test:unit:
     stage: test
-    script: make test-unit
+    script: make tests/TestCase
